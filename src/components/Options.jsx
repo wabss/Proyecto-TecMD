@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Box } from "@mui/material";
-import '../../style/Options.css'
+import '../style/Options.css'
 
 export const Options = () => {
   return (

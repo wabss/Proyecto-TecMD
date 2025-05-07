@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { CustomCard } from "../../components/About/CustomCard";
+import { CustomCard } from "../../components/CustomCard";
 
 export const About = () => {
   return (

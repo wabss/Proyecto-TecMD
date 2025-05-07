@@ -9,8 +9,8 @@ import {
 } from '@mui/material';
 import { Menu } from "@mui/icons-material";
 import { useState } from "react";
-import logo from '../../assets/logo.png';
-import '../../style/Navbar.css'
+import logo from '../assets/logo.png';
+import '../style/Navbar.css'
 import { Options } from './Options';
 
 export const Navbar = () => {
