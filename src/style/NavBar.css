@@ -1,0 +1,11 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        justify-content: center;
+    }
+}

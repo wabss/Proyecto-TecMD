@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  height: 100vh;
+}
+
+.home-container {
+    min-height: 100vh; 
+  }
+  
+  .hero-section {
+    width: 100%;
+    text-align: center;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+@media (max-width: 768px) {
+  .hero-section{
+    justify-content: flex-start;
+  }
+}

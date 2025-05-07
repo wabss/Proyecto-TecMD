@@ -1,0 +1,33 @@
+.gameboy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 459px;
+    width: 730px;
+    background-image: url('../assets/gameboy.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.gameboy img {
+    height: 150px;
+    width: auto;
+    margin: -20px 0;
+}
+
+.button-img {
+    height: 200px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .button {
+        height: 100px;
+        width: auto;
+    }
+    .button-img {
+        height: 130px;
+        width: auto;
+    }
+}
