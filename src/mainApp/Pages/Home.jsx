@@ -27,7 +27,7 @@ export const Home = () => {
           <Typography variant="h4" sx={{ mt: 2, mb: 2 }}>
             En este botón puedes encontrar el enlace al repositorio de GitHub que contiene todo el código del proyecto.
           </Typography>
-          <Link to='https://github.com/wabss/login-project'>
+          <Link to='https://github.com/wabss/TecMD.git'>
           <div className="button">
             <Button 
             variant="contained" 
