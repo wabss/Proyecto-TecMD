@@ -22,7 +22,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ padding: 2, backgroundColor: 'tertiary.main' }}>
+      <AppBar position="static" sx={{ padding: 2, backgroundColor: 'secondary.main', borderBottom: 'solid 8px #5E2B5A' }}>
         <Toolbar className="navBar">
           {isMobile && (
             <IconButton sx={{ mr: 2, color: '#fff' }} onClick={toggleMenu}>

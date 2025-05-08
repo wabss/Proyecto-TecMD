@@ -7,13 +7,11 @@ export const usePokeAPI = () => {
   
   const [pokemonName, setPokemonName] = useState(null)
   const [pokemonSprite, setPokemonSprite] = useState(null)
-  const [index, setIndex] = useState(1)
+  const [index, setIndex] = useState(25)
 
-  const nextPokemon = () => setIndex((prev) => prev + 1);
-  const lastPokemon = () => {
-    if (index > 1) {
-      setIndex((prev) => prev - 1);
-    }
+  const nextPokemon = () => {
+    const index = Math.floor((Math.random() * 1024) + 1);
+    setIndex((prev) => prev = index);
   };
     
   const cacheHandler = ({name, sprites}) => {
@@ -63,6 +61,5 @@ export const usePokeAPI = () => {
       pokemonName,
       pokemonSprite,
       nextPokemon,
-      lastPokemon,
     }
   }
