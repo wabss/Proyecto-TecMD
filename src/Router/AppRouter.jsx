@@ -7,10 +7,10 @@ export const AppRouter = () => {
     <>
       <BrowserRouter basename="/Proyecto-TecMD">
         <Routes>
-          <Route path="/Proyecto-TecMD" element={<Layout />} >
+          <Route path="/" element={<Layout />} >
             <Route index element={<Home />} />
-            <Route path="/Proyecto-TecMD/about" element={<About />} />
-            <Route path="/Proyecto-TecMD/pokemon" element={<Pokemon />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/pokemon" element={<Pokemon />} />
           </Route>
         </Routes>
       </BrowserRouter>
