@@ -5,12 +5,12 @@ import { Home, About, Pokemon } from '../mainApp'
 export const AppRouter = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Proyecto-TecMD">
         <Routes>
-          <Route path="/" element={<Layout />} >
+          <Route path="/Proyecto-TecMD" element={<Layout />} >
             <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/pokemon" element={<Pokemon />} />
+            <Route path="/Proyecto-TecMD/about" element={<About />} />
+            <Route path="/Proyecto-TecMD/pokemon" element={<Pokemon />} />
           </Route>
         </Routes>
       </BrowserRouter>

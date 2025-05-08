@@ -36,8 +36,7 @@ export const usePokeAPI = () => {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${index}`);
       cacheHandler(response.data);
     } catch (error) {
-      console.error('Error fetching Pokémon:', error);
-      setPokemonName('Error');
+      setPokemonName('Error: Tal vez buscaste un ID que no existe');
     }
   }
 

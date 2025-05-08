@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <Box className="slide">
       <Box sx={{padding: 4, backgroundColor:'primary.main', mb: 2}}>
-        <Typography variant='h1' sx={{mt: 2, textAlign: 'center'}}>La base de todo (excepto PokeAPI)</Typography>
+        <Typography variant='h1' sx={{mt: 2, textAlign: 'center'}}>HTML, CSS y JavaScript</Typography>
         <Typography variant='h4' sx={{padding: 4, mt: 3}}>
           HTML, CSS y JavaScript son las tecnologías fundamentales para el desarrollo web. HTML 
           (HyperText Markup Language) se encarga de estructurar el contenido de una página, como 

@@ -1,12 +1,14 @@
 import {usePokeAPI} from '../../hooks/usePokeAPI'
 import { useEffect, useState } from 'react'
-import { Grid, Box, Button, Fade, Typography } from '@mui/material'
+import { Grid, Box, Button, Fade, Typography, useTheme, useMediaQuery } from '@mui/material'
 import  left from '../../assets/left.png'
 import  right from '../../assets/right.png'
 import '../../style/Pokemon.css'
  
 export const Pokemon = () => {
     const [isLoading, setIsLoading] = useState(true)
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const {pokemonName, pokemonSprite, nextPokemon, lastPokemon} = usePokeAPI()
 
     
@@ -19,11 +21,21 @@ export const Pokemon = () => {
 
   return (
     <>
-    {isLoading && (
+    {isLoading && isMobile && (
+    <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
+        <Box className='center-box' sx={{ height: '100vh' }}>
+            <Typography variant="h2" sx={{ padding: 2 }}>
+                Voltea el celular
+            </Typography>
+        </Box>
+    </Fade>
+)}
+
+    {isLoading && !isMobile && (
         <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
-            <Box className='center-box' sx={{height: '100vh'}}>
+            <Box className='center-box' sx={{ height: '100vh' }}>
                 <Typography variant="h2" sx={{ padding: 2 }}>
-                   Cargando...
+                    Cargando...
                 </Typography>
             </Box>
         </Fade>
@@ -31,7 +43,7 @@ export const Pokemon = () => {
 
     {!isLoading && (
     <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
-        <Box sx={{height: '100vh', backgroundColor: 'primary.main'}} className='center-box'>
+        <Box sx={{height: '1000px', backgroundColor: 'primary.main'}} className='center-box'>
             <Grid container sx={{mt: 2}}>
                 <Grid size={{xs: 12}} className='center-box' sx={{mb: 2}}>
                     <Box className='gameboy'>

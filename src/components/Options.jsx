@@ -4,10 +4,10 @@ import '../style/Options.css'
 
 export const Options = () => {
   return (
-    <Box className={'center-boxs'} >
+    <Box className={'center-box'} >
         <Button className='text' color="inherit" component={Link} to="/">Inicio</Button>
         <Button className='text' color="inherit" component={Link} to="/about">¿Cómo se creó?</Button>
-        <Button className='text' color="inherit" component={Link} to="/pokemon">Elige un Pokemon</Button>
+        <Button className='text' color="inherit" component={Link} to="/pokemon">Pokédex</Button>
     </Box>
   )
 }
