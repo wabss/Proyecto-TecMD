@@ -8,6 +8,7 @@ export const Options = () => {
         <Button className='text' color="inherit" component={Link} to="/">Inicio</Button>
         <Button className='text' color="inherit" component={Link} to="/about">¿Cómo se creó?</Button>
         <Button className='text' color="inherit" component={Link} to="/pokemon">Pokédex</Button>
+        <Button className='text' color="inherit" component={Link} to="">Repositorio de Githubs</Button>
     </Box>
   )
 }

@@ -1,6 +1,5 @@
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import '../../style/Home.css';
-import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -23,21 +22,6 @@ export const Home = () => {
           <Typography variant="h4" sx={{ mt: 2, mb: 2 }}>
             En este botón puedes encontrar el enlace al repositorio de GitHub que contiene todo el código del proyecto.
           </Typography>
-          <Link to='https://github.com/wabss/Proyecto-TecMD'>
-          <div className="button">
-            <Button 
-            variant="contained" 
-            color="primary" 
-            sx={{
-              backgroundColor: 'secondary.main', 
-              height: '80px', 
-              width: '160px', 
-              fontSize: '30px'
-            }}>
-              GitHub
-            </Button>
-          </div>
-          </Link>
         </Grid>
       </Grid>
     </Box>
