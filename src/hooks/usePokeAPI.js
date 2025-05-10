@@ -40,7 +40,8 @@ export const usePokeAPI = () => {
 
 
   useEffect(()=>{
-    let timeoutId;
+        let timeoutId;
+
 
     const getPokemon = () => {
 
