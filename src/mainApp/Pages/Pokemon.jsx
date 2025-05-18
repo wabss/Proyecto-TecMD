@@ -1,7 +1,6 @@
 import {usePokeAPI} from '../../hooks/usePokeAPI'
 import { useEffect, useState } from 'react'
 import { Grid, Box, Button, Fade, Typography, useTheme, useMediaQuery } from '@mui/material'
-import  right from '../../assets/right.png'
 import '../../style/Pokemon.css'
  
 export const Pokemon = () => {
@@ -20,25 +19,15 @@ export const Pokemon = () => {
 
   return (
     <>
-    {isLoading && isMobile && (
+    {isLoading && (
     <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
         <Box className='center-box' sx={{ height: '100vh' }}>
             <Typography variant="h2" sx={{ padding: 2, textAlign: 'center' }}>
-                Voltea el celular
+                {isMobile ? 'Voltea el celular' : 'Cargando'}
             </Typography>
         </Box>
     </Fade>
 )}
-
-    {isLoading && !isMobile && (
-        <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
-            <Box className='center-box' sx={{ height: '100vh' }}>
-                <Typography variant="h2" sx={{ padding: 2 }}>
-                    Cargando...
-                </Typography>
-            </Box>
-        </Fade>
-    )}
 
     {!isLoading && (
     <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
