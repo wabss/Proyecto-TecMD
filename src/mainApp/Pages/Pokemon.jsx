@@ -50,12 +50,12 @@ export const Pokemon = () => {
                     sx={{
                     backgroundColor: 'secondary.main', 
                     height: '80px', 
-                    width: '160px', 
+                    width: '260px', 
                     fontSize: '30px',
                     borderRadius: 0,
                     borderBottom: 'solid 8px #5E2B5A'
                     }}>
-                    Siguiente
+                    Siguiente Pokemon
                     </Button>
                 </div>
                 </Grid>
