@@ -17,7 +17,7 @@ export const usePokeAPI = () => {
 
   const nextPokemon = () => {
     const index = Math.floor(Math.random() * 1024) + 1;
-    setIndex((prev) => prev = index);
+    setIndex(index);
   };
 
   const handlePokemon = async() => {

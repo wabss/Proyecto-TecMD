@@ -1,15 +1,14 @@
 import { usePokeAPI } from './usePokeAPI'
 import { useEffect, useState } from 'react'
 import { Grid, Box, Button, Fade, Typography, useTheme, useMediaQuery } from '@mui/material'
-import Gameboy  from'../../../assets/gameboy.png'
+import Gameboy  from'../../../assets/gameboy.webp'
 import './Pokemon.css'
  
 export const Pokemon = () => {
-    const [isLoading, setIsLoading] = useState(true)
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const {pokemonName, pokemonSprite, nextPokemon} = usePokeAPI()
-
+    const [isLoading, setIsLoading] = useState(true)
     
     useEffect(() => {
         let timeout; 
@@ -34,7 +33,7 @@ export const Pokemon = () => {
         <Fade in={true} timeout={1000} mountOnEnter unmountOnExit>
             <Box sx={{height: '800px', backgroundColor: 'primary.main'}} className='center-box'>
                 <Grid container>
-                    <Grid size={{xs: 12}} className='center-box' sx={{mb: 2}}>
+                    <Grid size={{xs: 12}} className='center-box slide' sx={{mb: 2}}>
                         <Box sx={{
                             display: 'flex',
                             justifyContent: 'center',
@@ -47,8 +46,10 @@ export const Pokemon = () => {
                             backgroundPosition: 'center',
                         }}>
                             <Box className='center-box' sx={{width: '200px', flexDirection: 'column'}}>
-                                {pokemonSprite && <img src={pokemonSprite.front_default} alt="Pokemon" />}
-                                <h1>{pokemonName}</h1>
+                                {pokemonSprite && (
+                                    <img width={120} src={pokemonSprite.front_default} alt="Pokemon" />
+                                )}
+                                <Typography sx={{fontSize: 30,}}>{pokemonName}</Typography>
                             </Box>
                         </Box>
                     </Grid>

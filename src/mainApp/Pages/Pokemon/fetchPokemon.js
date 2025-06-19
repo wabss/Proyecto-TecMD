@@ -6,6 +6,8 @@ export const fetchPokemon = async(num) => {
       return data;
     } catch (error) {
       setPokemonName('Error: Tal vez buscaste un ID que no existe');
+      setPokemonSprite(null);
     }
+    
   }
 

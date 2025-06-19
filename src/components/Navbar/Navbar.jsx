@@ -1,7 +1,7 @@
 import { Grid, Box, Button } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 import { styled } from '@mui/material/styles';
 
 const CustomButton = styled(Button)(({ theme }) => ({
@@ -28,7 +28,7 @@ export const Navbar = () => {
           },
           flexWrap: 'wrap',
       }}>
-          <Box component="img" src={logo} alt="logo" loading="lazy"/>
+          <Box component="img" width={273} height={'auto'} src={logo} alt="logo" loading="lazy"/>
           <Box className={'center-box'} sx={{gap: 2}} >
             <CustomButton color="inherit" component={Link} to="/">Inicio</CustomButton>
             <CustomButton color="inherit" component={Link} to="/about">¿Cómo se creó?</CustomButton>

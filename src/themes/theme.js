@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material"
+import Jersey10TTF from '../assets/fonts/Jersey10-Regular.ttf';
+
 
 export const theme = createTheme({
     palette:{
@@ -20,5 +22,17 @@ export const theme = createTheme({
     },
     typography: {
         fontFamily: "'Jersey 10', 'sans-serif'",
+    },
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: `
+            @font-face {
+                font-family: 'Jersey 10' ;
+                src: url('${Jersey10TTF}') format('truetype');
+                font-weight: 400;
+                font-display: swap;
+            }
+            `,
+        }
     }
 });
