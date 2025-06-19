@@ -34,4 +34,4 @@ npm run dev
 ```
 # Autor
 
-Jesús Afonso | @usuarioGitHub
+Jesús Afonso | @wabss
