@@ -1,8 +1,15 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react';
+import { fetchPokemon } from './fetchPokemon';
   
-export const usePokeAPI = () => {
+/**
+ * 
+ * @returns {Object}
+ *   pokemonName: string | null - Nombre del Pokemon.
+ *   pokemonSprite: object | null - Imagen del Pokemon.
+ *   nextPokemon: () => void - Función para obtener un Pokemon aleatorio.
+ */
 
+export const usePokeAPI = () => {
   
   const [pokemonName, setPokemonName] = useState(null)
   const [pokemonSprite, setPokemonSprite] = useState(null)
@@ -13,16 +20,12 @@ export const usePokeAPI = () => {
     setIndex((prev) => prev = index);
   };
 
-  const fetchPokemon = async() => {
-    try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${index}`);
-      const name = response.data.name
-      const cleanName = name.replace(/[@#¿!-]/g, " ");
-      setPokemonName(cleanName.charAt(0).toUpperCase() + cleanName.slice(1));
-      setPokemonSprite(response.data.sprites);
-    } catch (error) {
-      setPokemonName('Error: Tal vez buscaste un ID que no existe');
-    }
+  const handlePokemon = async() => {
+    const data = await fetchPokemon(index);
+    const {name, sprites} = data;
+    const cleanName = name.replace(/[@#¿!-]/g, " ");
+    setPokemonName(cleanName.charAt(0).toUpperCase() + cleanName.slice(1));
+    setPokemonSprite(sprites);
   }
 
   useEffect(()=>{
@@ -31,8 +34,8 @@ export const usePokeAPI = () => {
         setPokemonName('Cargando...');
         setPokemonSprite(null);
         timeoutId = setTimeout( () => {
-        fetchPokemon()
-      }, 1000)
+          handlePokemon();
+      }, 500)
     }
     getPokemon()
 

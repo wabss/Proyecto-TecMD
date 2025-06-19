@@ -1,3 +1,3 @@
-export * from './Pages/Home'
-export * from './Pages/About'
-export * from './Pages/Pokemon'
+export * from './Pages/Home/Home'
+export * from './Pages/About/About'
+export * from './Pages/Pokemon/Pokemon'

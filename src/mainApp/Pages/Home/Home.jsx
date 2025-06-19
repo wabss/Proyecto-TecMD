@@ -1,5 +1,5 @@
 import { Grid, Typography, Box } from "@mui/material";
-import '../../style/Home.css';
+import './Home.css';
 
 export const Home = () => {
   return (

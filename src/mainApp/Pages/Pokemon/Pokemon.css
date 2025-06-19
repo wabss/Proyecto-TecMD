@@ -5,7 +5,6 @@
     flex-direction: column;
     height: 459px;
     width: 730px;
-    background-image: url('../assets/gameboy.png');
     background-size: cover;
     background-position: center;
 }

@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import { CustomCard } from "../../components/CustomCard";
-import { libraries } from "../../data/libraries"
+import { CustomCard } from '../../../components';
+import { libraries } from "./libraries"
 
 export const About = () => {
   return (
