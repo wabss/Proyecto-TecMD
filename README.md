@@ -1,12 +1,37 @@
-# React + Vite
+## Pixely
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pixely es una aplicación frontend desarrollada con la finalidad de demostrar los conocimientos adquiridos durante mi pasantía. El proyecto aplica conceptos como el diseño responsive, la implementación de la librería React, el manejo de componentes reutilizables, el uso de rutas para las distintas vistas de la aplicación, el consumo de una API usando Axios y la utilización de Material UI para componentes predefinidos.
 
-Currently, two official plugins are available:
+# Tecnologías usadas
+- React 19
+- React Router
+- Axios
+- Material UI
+- PokeAPI
+- Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Función principal 
 
-## Expanding the ESLint configuration
+ Visualización de un pokemon con su respectivo nombre e imagen
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# API
+
+ Se usa la PokeAPI, una API rest gratuita con datos de todos los Pokemones existentes
+
+ # Diseño
+
+ Se emplea Material UI para facilitar el maquetado usando componentes predefinidos y se implementa un Theme con colores y fuentes definidas para todo el sitio web.
+
+# Instalacion y Ejecución
+
+```bash
+
+git clone https://github.com/wabss/Proyecto-TecMD.git
+cd mi-proyecto
+npm install
+npm run dev
+
+```
+# Autor
+
+Jesús Afonso | @usuarioGitHub
